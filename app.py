@@ -197,6 +197,32 @@ def home():
             font-size: 0.7rem;
             color: #aaa;
           }
+
+          /* Responsive Design */
+          @media (max-width: 768px) {
+            .header {
+              flex-direction: column;
+              align-items: flex-start;
+            }
+            .nav ul {
+              flex-direction: column;
+            }
+            .nav ul li {
+              margin: 10px 0;
+            }
+            .download-btn {
+              margin-top: 20px;
+            }
+            .main {
+              padding: 20px;
+            }
+            .content h1 {
+              font-size: 2rem;
+            }
+            .content p {
+              font-size: 1rem;
+            }
+          }
         </style>
       </head>
       <body>
@@ -272,6 +298,7 @@ def renderPredictPage():
     <html>
     <head>
         <title>Car Price Prediction</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <style>
             @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
 
@@ -362,6 +389,15 @@ def renderPredictPage():
 
             button:hover {
                 background: rgba(255, 255, 255, 0.3);
+            }
+
+            @media (max-width: 768px) {
+                form {
+                    grid-template-columns: 1fr;
+                }
+                .button-container {
+                    margin-top: 10px;
+                }
             }
         </style>
     </head>
@@ -496,6 +532,7 @@ def predict():
             <html>
             <head>
                 <title>Prediction Result</title>
+                <meta name="viewport" content="width=device-width, initial-scale=1.0" />
                 <style>
                     @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
 
@@ -583,6 +620,15 @@ def predict():
                         font-size: 0.5em;
                         opacity: 0.8;
                         margin-left: 5px;
+                    }
+
+                    @media (max-width: 768px) {
+                        .price {
+                            font-size: 2em;
+                        }
+                        .back-button a {
+                            padding: 10px 20px;
+                        }
                     }
                 </style>
             </head>
